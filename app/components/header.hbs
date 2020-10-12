@@ -1,1 +1,22 @@
-Header works
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <LinkTo @route="index" class="navbar-brand">Ember of Legends</LinkTo>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <LinkTo @route="index" class="nav-link">Home</LinkTo>
+      </li>
+      <li class="nav-item">
+        <LinkTo @route="status" class="nav-link">Status</LinkTo>
+      </li>
+      <li class="nav-item">
+        <LinkTo @route="leaderboards" class="nav-link">Leaderboards</LinkTo>
+      </li>
+      <li class="nav-item">
+        <LinkTo @route="games" class="nav-link">Featured Games</LinkTo>
+      </li>
+    </ul>
+  </div>
+</nav>

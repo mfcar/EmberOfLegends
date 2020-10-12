@@ -1,0 +1,12 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3.5rem
+}
+
+.footer:not([class*=container]) {
+  padding-right: 2rem;
+  padding-left: 2rem
+}

@@ -7,4 +7,7 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
+  this.route('status');
+  this.route('games', {path: '/featured-games'});
+  this.route('leaderboards');
 });

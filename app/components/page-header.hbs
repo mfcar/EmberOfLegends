@@ -1,0 +1,16 @@
+<div class="page-header">
+  <div class="row align-items-end">
+    <div class="col-sm mb-2 mb-sm-0">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-no-gutter">
+          <li class="breadcrumb-item">
+            <LinkTo @route="index" class="breadcrumb-link">Home</LinkTo>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">{{yield}}</li>
+        </ol>
+      </nav>
+      <h1 class="page-title">{{yield}}</h1>
+    </div>
+  </div>
+</div>
+<hr/>
