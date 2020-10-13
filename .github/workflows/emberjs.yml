@@ -1,0 +1,35 @@
+name: Push to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2.1.2
+      with:
+        node-version: ${{ matrix.node-version }}
+        
+    - name: npm install
+      run: |
+        npm install -g ember-cli
+        npm ci
+        
+    - name: ember build
+      run: |
+        ember build --environment=production
+      env:
+          CI: true
+          GH_TOKEN: ${{ secrets.GITHUBTOKEN }}
+          EMAIL: ${{ secrets.EMAIL }}
