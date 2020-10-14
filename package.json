@@ -60,7 +60,7 @@
     "edition": "octane"
   },
   "dependencies": {
-    "bootstrap": "^4.5.2",
+    "bootstrap": "^4.5.3",
     "jquery": "^3.5.1"
   }
 }
